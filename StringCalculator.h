@@ -1,18 +1,15 @@
-int isEmptyString(const char *str)
-{
-    // Check if the string is NULL or the first character is '\0'
-    if(str == NULL || *str == '\0')
-    {   
-        return 1;
-    }
-}
+#ifndef STRINGCALCULATOR_H
+#define STRINGCALCULATOR_H
 
-int add(const char* input)
-{
-    // Check if the string is NULL or the first character is '\0'
-   if(isEmptyString(input))
-    {
-   return 0;
-    }
-    return -1;
-}
+#include <string>
+
+class StringCalculator {
+public:
+    int add(const std::string& input);
+    int addofnum(const std::string& input);
+    void verify_NegativeNum(const std::string& input);
+    std::string normalizeDelimiters(const std::string& input);
+    std::string newlinecheck(const std::string& input);   
+ };
+
+#endif 
